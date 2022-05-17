@@ -1,13 +1,20 @@
-import React from 'react';
-import './App.css';
-import { useSelector } from 'react-redux';
+import './styles/App.css';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './redux/store';
+import { changeTheme } from './redux/app/reducers';
 
 const App = () => {
-  const myValue = useSelector<RootState, RootState['users']>((store) => store.users);
+  const dispatch = useDispatch();
+  const appTheme = useSelector<RootState, RootState['app']['theme']>((store) => store.app.theme);
+
+  const handleThemeClick = () => {
+    dispatch(changeTheme());
+  }
+
   return (
     <div className="App">
-      {myValue.name}
+      {appTheme}
+      <button onClick={handleThemeClick}>Change Theme</button>
     </div>
   );
 }
