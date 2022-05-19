@@ -1,5 +1,19 @@
 {
   "name": "zedb",
+  "contributors": [
+    {
+      "name" : "Vladislav Pokhyl",
+      "url": "https://github.com/VladislavPokhyl"
+    },
+    {
+      "name" : "David Korystov",
+      "url": "https://github.com/DavidKorystov"
+    },
+    {
+      "name" : "Vasyl Hladush",
+      "url": "https://github.com/vasyagladush"
+    }
+  ],
   "version": "0.1.0",
   "private": true,
   "dependencies": {
