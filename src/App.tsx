@@ -6,6 +6,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import { Homepage } from "./components/Homepage";
 import { Aboutpage } from "./components/Aboutpage";
 import { Blogpage } from "./components/Blogpage";
+import LoginPage from "./pages/LoginPage";
 
 const Header = styled.header`
   height: 50px;
@@ -48,21 +49,13 @@ const App = () => {
 
   return (
     <>
-      <Header>
-        <Link to="/about">About</Link>
-        <Link to="/">Home</Link>
-        <Link to="/blog">Blog</Link>
-      </Header>
-
-      <Layout theme={appTheme}>
-        <Button onClick={handleThemeClick}>Theme now: {appTheme}</Button>
-
-        <Routes>
+     {/* <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<Aboutpage />} />
           <Route path="/blog" element={<Blogpage />} />
-        </Routes>
-      </Layout>
+     </Routes> */}
+
+    <LoginPage />
     </>
   );
 };
