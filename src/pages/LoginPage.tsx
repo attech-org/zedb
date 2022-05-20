@@ -1,9 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { Link, Route, Routes } from "react-router-dom";
-import { useState } from "react";
 import LoginPageInputField from "../components/LoginPageInputField";
-import { Sign } from "crypto";
 import SignUpPage from "./SignUpPage";
 
 const Layout = styled.main`
@@ -24,6 +21,10 @@ const MainSection = styled.div`
   border: 1px solid gray;
   background-color: #ffffff;
   margin: 0 0 50px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const LogoHeader = styled.h1`

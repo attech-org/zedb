@@ -1,11 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "./redux/store";
-import { changeTheme } from "./redux/app/reducers";
-import styled from "styled-components";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { Homepage } from "./pages/Homepage";
+import { Aboutpage } from "./pages/Aboutpage";
+import { Blogpage } from "./pages/Blogpage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-import Home from "./pages/Home";
 
 const App = () => {
   // const dispatch = useDispatch();
@@ -19,8 +17,13 @@ const App = () => {
 
   return (
     <>
-      {/* <LoginPage /> */}
-      <SignUpPage />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<SignUpPage />} />
+        <Route path="/about" element={<Aboutpage />} />
+        <Route path="/blog" element={<Blogpage />} />
+      </Routes>
     </>
   );
 };
