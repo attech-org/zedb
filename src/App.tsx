@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./redux/store";
 import { changeTheme } from "./redux/app/reducers";
 import styled from "styled-components";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Homepage } from "./components/Homepage";
 import { Aboutpage } from "./components/Aboutpage";
 import { Blogpage } from "./components/Blogpage";
