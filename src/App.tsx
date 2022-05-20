@@ -19,8 +19,8 @@ const App = () => {
 
   return (
     <>
-      <LoginPage />
-      {/* <SignUpPage /> */}
+      {/* <LoginPage /> */}
+      <SignUpPage />
     </>
   );
 };
