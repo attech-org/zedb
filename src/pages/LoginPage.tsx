@@ -22,6 +22,10 @@ const MainSection = styled.div`
   border: 1px solid gray;
   background-color: #ffffff;
   margin: 0 0 50px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const LogoHeader = styled.h1`

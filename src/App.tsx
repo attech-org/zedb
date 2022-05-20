@@ -49,13 +49,12 @@ const App = () => {
 
   return (
     <>
-     {/* <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about" element={<Aboutpage />} />
-          <Route path="/blog" element={<Blogpage />} />
-     </Routes> */}
-
-    <LoginPage />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/about" element={<Aboutpage />} />
+        <Route path="/blog" element={<Blogpage />} />
+      </Routes>
     </>
   );
 };
