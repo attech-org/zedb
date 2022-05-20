@@ -31,8 +31,8 @@ const Button = styled.button`
 `;
 
 const LoginPageInputField = (props: any) => {
-  const [loginInput, setLoginInput] = useState('');
-  const [passwordInput, setPasswordInput] = useState('');
+  const [loginInput, setLoginInput] = useState("");
+  const [passwordInput, setPasswordInput] = useState("");
 
   const onLoginInputChange = (e: any) => {
     setLoginInput(e.target.value);
@@ -40,17 +40,26 @@ const LoginPageInputField = (props: any) => {
 
   const onPasswordInputChange = (e: any) => {
     setPasswordInput(e.target.value);
-};
+  };
 
   const onButtonClick = () => {
-    if(loginInput !== '' && passwordInput !== '')
-        props.onButtonClick(loginInput, passwordInput);
-  }
+    if (loginInput !== "" && passwordInput !== "")
+      props.onButtonClick(loginInput, passwordInput);
+  };
 
   return (
     <>
-      <Input onChange={onLoginInputChange} value={loginInput} placeholder='Phone number, username, or email'></Input>
-      <Input onChange={onPasswordInputChange} value={passwordInput} type="password" placeholder='Password'></Input>
+      <Input
+        onChange={onLoginInputChange}
+        value={loginInput}
+        placeholder="Phone number, username, or email"
+      ></Input>
+      <Input
+        onChange={onPasswordInputChange}
+        value={passwordInput}
+        type="password"
+        placeholder="Password"
+      ></Input>
       <Button onClick={onButtonClick}>Log In</Button>
     </>
   );
