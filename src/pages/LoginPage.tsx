@@ -11,26 +11,25 @@ const Layout = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 `;
 
 const MainSection = styled.div`
-  width: 30%;
+  max-width: 350px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border: 1px solid gray;
+  border: 1px solid #dbdbdb;
   background-color: #ffffff;
-  margin: 0 0 50px;
-
-  @media (max-width: 600px) {
-    width: 100%;
-  }
+  margin: 0 0 10px;
 `;
 
 const LogoHeader = styled.h1`
   margin-top: 30px;
   margin-bottom: 30px;
   letter-spacing: 5px;
+  padding: 0 50px 0;
 `;
 
 const OrHeader = styled.h3`
@@ -46,32 +45,51 @@ const OrSpan = styled.span`
   padding: 0 10px;
 `;
 
+const LoginWithFacebookLink = styled.p`
+  color: #3253b0;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 0 30px 0;
+`;
+
+const FacebookIcon = styled.img`
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 5px;
+  margin-right: 3px;
+`;
+
 const ForgotPasswordLink = styled.p`
   color: #3253b0;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 20px;
   cursor: pointer;
 `;
 
 const NoAccountSection = styled.div`
-  width: 30%;
+  max-width: 350px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border: 1px solid gray;
+  border: 1px solid #dbdbdb;
   background-color: #ffffff;
   padding: 7px 0;
 `;
 
 const NoAccountParagraph = styled.p`
-  font-size: 18px;
+  font-size: 14px;
 `;
-const NoAccountLink = styled.a`
+const LinkToRegisterPage = styled(Link)`
   color: #00b3ff;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 const Footer = styled.footer`
@@ -103,15 +121,17 @@ const LoginPage = () => {
           <OrHeader>
             <OrSpan>OR</OrSpan>
           </OrHeader>
+          <LoginWithFacebookLink>
+            <FacebookIcon src={require('../assets/images/facebook-icon.png')} alt="Facebook Icon" />
+            Log in with Facebook
+            </LoginWithFacebookLink>
           <ForgotPasswordLink>Forgot password?</ForgotPasswordLink>
         </MainSection>
 
         <NoAccountSection>
           <NoAccountParagraph>
             Don't have an account?{" "}
-            <NoAccountLink>
-              <Link to="/sign-up">Sign Up</Link>;
-            </NoAccountLink>
+              <LinkToRegisterPage to="/register">Sign Up</LinkToRegisterPage>
           </NoAccountParagraph>
         </NoAccountSection>
 
@@ -119,8 +139,7 @@ const LoginPage = () => {
       </Layout>
 
       <Routes>
-        <Route path="/sign-up" element={<SignUpPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<SignUpPage />} />
       </Routes>
     </>
   );
