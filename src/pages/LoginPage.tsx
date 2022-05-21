@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link, Route, Routes } from "react-router-dom";
-import LoginPageInputField from "../components/LoginPageInputField";
+import LoginPageInputField from "../containers/LoginForm";
 import SignUpPage from "./SignUpPage";
 
 const Layout = styled.main`

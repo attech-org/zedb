@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import SignUpPageInputField from "../components/SignUpPageInputFielf";
+import SignUpPageInputField from "../containers/RegisterForm";
 
 const Layout = styled.main`
   width: 100vw;

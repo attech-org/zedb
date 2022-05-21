@@ -1,16 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-
-const Input = styled.input`
-  margin-bottom: 20px;
-  width: calc(80% - 20px);
-  height: 2em;
-  background-color: #f8f8f8;
-  font-size: 15px;
-  border: 1px solid #8e8e8e;
-  border-radius: 4px;
-  padding: 10px 10px;
-`;
+import Input from "../components/Input";
 
 const Button = styled.button`
   margin-bottom: 20px;
