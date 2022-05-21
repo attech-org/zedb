@@ -1,8 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { Link, Route, Routes } from "react-router-dom";
-import { useState } from "react";
 import LoginPageInputField from "../components/LoginPageInputField";
+import SignUpPage from "./SignUpPage";
 
 const Layout = styled.main`
   width: 100vw;
@@ -30,24 +29,24 @@ const MainSection = styled.div`
 
 const LogoHeader = styled.h1`
   margin-top: 30px;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
   letter-spacing: 5px;
 `;
 
 const OrHeader = styled.h3`
-  width: 80%; 
-  text-align: center; 
-  border-bottom: 1px solid #000; 
+  width: 80%;
+  text-align: center;
+  border-bottom: 1px solid #000;
   line-height: 0.1em;
-  margin: 10px 0 30px; 
+  margin: 10px 0 30px;
 `;
 
 const OrSpan = styled.span`
-   background:#fff; 
-   padding:0 10px; 
+  background: #fff;
+  padding: 0 10px;
 `;
 
-const ForgotPasswordLink = styled.a`
+const ForgotPasswordLink = styled.p`
   color: #3253b0;
   font-weight: 500;
   font-size: 18px;
@@ -81,8 +80,6 @@ const Footer = styled.footer`
   width: 90%;
 `;
 
-// <Link to="/sign-up">Sign Up</Link>
-
 // const Button = styled.button`
 //   display: inline-block;
 //   border-radius: 3px;
@@ -94,24 +91,37 @@ const Footer = styled.footer`
 //   border: 2px solid black;
 // `;
 
+/* <Link to="/sign-up">Sign Up</Link>; */
+
 const LoginPage = () => {
   return (
     <>
       <Layout>
-
         <MainSection>
           <LogoHeader>ZEDB</LogoHeader>
           <LoginPageInputField />
-          <OrHeader><OrSpan>OR</OrSpan></OrHeader>
+          <OrHeader>
+            <OrSpan>OR</OrSpan>
+          </OrHeader>
           <ForgotPasswordLink>Forgot password?</ForgotPasswordLink>
         </MainSection>
 
         <NoAccountSection>
-          <NoAccountParagraph>Don't have an account? <NoAccountLink>Sign Up</NoAccountLink></NoAccountParagraph>
+          <NoAccountParagraph>
+            Don't have an account?{" "}
+            <NoAccountLink>
+              <Link to="/sign-up">Sign Up</Link>;
+            </NoAccountLink>
+          </NoAccountParagraph>
         </NoAccountSection>
 
         <Footer></Footer>
       </Layout>
+
+      <Routes>
+        <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
     </>
   );
 };
