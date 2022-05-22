@@ -90,6 +90,10 @@ const LinkToRegisterPage = styled(Link)`
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
+  
+  :visited{
+    color: #00b3ff;
+  }
 `;
 
 const Footer = styled.footer`
@@ -97,19 +101,6 @@ const Footer = styled.footer`
   bottom: 0;
   width: 90%;
 `;
-
-// const Button = styled.button`
-//   display: inline-block;
-//   border-radius: 3px;
-//   padding: 0.5rem 0;
-//   margin: 0.5rem 1rem;
-//   width: 11rem;
-//   background: transparent;
-//   color: black;
-//   border: 2px solid black;
-// `;
-
-/* <Link to="/sign-up">Sign Up</Link>; */
 
 const LoginPage = () => {
   return (
@@ -137,10 +128,6 @@ const LoginPage = () => {
 
         <Footer></Footer>
       </Layout>
-
-      <Routes>
-        <Route path="/register" element={<SignUpPage />} />
-      </Routes>
     </>
   );
 };
