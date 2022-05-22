@@ -82,11 +82,11 @@ const NoAccountSection = styled.div`
 `;
 
 const NoAccountParagraph = styled.p`
-  font-size: 14px;
+  font-size: 12px;
 `;
 const LinkToRegisterPage = styled(Link)`
   color: #00b3ff;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
