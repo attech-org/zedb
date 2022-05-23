@@ -3,21 +3,22 @@ import styled from "styled-components";
 import Input from "../components/Input";
 
 const Button = styled.button`
+  margin-top: 10px;
   margin-bottom: 20px;
   width: 80%;
-  height: 1.5em;
-  background-color: #00b3ff;
+  height: 2em;
   color: white;
-  border: 0 solid transparent;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1.5em;
-  padding-top: 1.5em;
+  padding-bottom: 0.7em;
+  padding-top: 0.7em;
   cursor: pointer;
+  background-color: #00b3ff;
+  border: 1px solid transparent;
 `;
 
 const LoginPageInputField = (props: any) => {
