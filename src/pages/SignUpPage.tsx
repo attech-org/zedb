@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { GetTheApp } from "../components/GetTheApp";
 import SignUpPageInputField from "../containers/RegisterForm";
 
 const Layout = styled.main`
@@ -10,6 +11,8 @@ const Layout = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
 `;
 
 const MainSection = styled.div`
@@ -29,13 +32,12 @@ const HaveAnAccountSection = styled.div`
   flex-wrap: wrap;
   border: 1px solid #dbdbdb;
   background-color: #ffffff;
-  padding: 7px 0;
+  padding: 30px 0;
 `;
 
-const LogoHeader = styled.h1`
-  margin-top: 30px;
-  margin-bottom: 30px;
-  letter-spacing: 5px;
+const LogoInstagram = styled.img`
+  margin-top: 36px;
+  margin-bottom: 12px;
 `;
 
 const OrHeader = styled.h3`
@@ -117,7 +119,10 @@ const SignUpPage = () => {
     <>
       <Layout>
         <MainSection>
-          <LogoHeader>ZEDB</LogoHeader>
+          <LogoInstagram
+            alt="Instagram"
+            src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
+          ></LogoInstagram>
           <H2>Sign up to see photos and videos from your friends.</H2>
           <LogInWithFacebookButton>
             Log in with Facebook
@@ -157,6 +162,8 @@ const SignUpPage = () => {
             Have an account? <StyledLink to="/login">Log in</StyledLink>
           </HaveAnAccountParagraph>
         </HaveAnAccountSection>
+
+        <GetTheApp />
 
         <Footer></Footer>
       </Layout>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link, Route, Routes } from "react-router-dom";
 import LoginPageInputField from "../containers/LoginForm";
 import SignUpPage from "./SignUpPage";
+import { GetTheApp } from "../components/GetTheApp";
 
 const Layout = styled.main`
   width: 100vw;
@@ -11,7 +12,8 @@ const Layout = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
 `;
 
 const MainSection = styled.div`
@@ -25,28 +27,39 @@ const MainSection = styled.div`
   margin: 0 0 10px;
 `;
 
-const LogoHeader = styled.h1`
-  margin-top: 30px;
-  margin-bottom: 30px;
-  letter-spacing: 5px;
-  padding: 0 50px 0;
-`;
+// const OrHeader = styled.h3`
+//   width: 80%;
+//   text-align: center;
+//   border-bottom: 1px solid #000;
+//   line-height: 0.1em;
+//   margin: 10px 0 30px;
+// `;
+
+// const OrSpan = styled.span`
+//   background: #fff;
+//   padding: 0 10px;
+// `;
 
 const OrHeader = styled.h3`
   width: 80%;
   text-align: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #dbdbdb;
   line-height: 0.1em;
-  margin: 10px 0 30px;
+  margin: 0px 0 30px;
 `;
 
 const OrSpan = styled.span`
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 18px;
+  text-transform: uppercase;
+  color: #8e8e8e;
   background: #fff;
   padding: 0 10px;
 `;
 
 const LoginWithFacebookLink = styled.p`
-  color: #3253b0;
+  color: #385185;
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 20px;
@@ -63,7 +76,7 @@ const FacebookIcon = styled.img`
 `;
 
 const ForgotPasswordLink = styled.p`
-  color: #3253b0;
+  color: #00376b;
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 20px;
@@ -82,7 +95,9 @@ const NoAccountSection = styled.div`
 `;
 
 const NoAccountParagraph = styled.p`
-  font-size: 12px;
+  font-size: 14px;
+  margin: 15px;
+  text-align: center;
 `;
 const LinkToRegisterPage = styled(Link)`
   color: #00b3ff;
@@ -96,6 +111,11 @@ const Footer = styled.footer`
   position: absolute;
   bottom: 0;
   width: 90%;
+`;
+
+const LogoInstagram = styled.img`
+  margin-top: 36px;
+  margin-bottom: 30px;
 `;
 
 // const Button = styled.button`
@@ -116,24 +136,32 @@ const LoginPage = () => {
     <>
       <Layout>
         <MainSection>
-          <LogoHeader>ZEDB</LogoHeader>
+          <LogoInstagram
+            alt="Instagram"
+            src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
+          ></LogoInstagram>{" "}
           <LoginPageInputField />
           <OrHeader>
             <OrSpan>OR</OrSpan>
           </OrHeader>
           <LoginWithFacebookLink>
-            <FacebookIcon src={require('../assets/images/facebook-icon.png')} alt="Facebook Icon" />
+            <FacebookIcon
+              src={require("../assets/images/facebook-icon.png")}
+              alt="Facebook Icon"
+            />
             Log in with Facebook
-            </LoginWithFacebookLink>
+          </LoginWithFacebookLink>
           <ForgotPasswordLink>Forgot password?</ForgotPasswordLink>
         </MainSection>
 
         <NoAccountSection>
           <NoAccountParagraph>
             Don't have an account?{" "}
-              <LinkToRegisterPage to="/register">Sign Up</LinkToRegisterPage>
+            <LinkToRegisterPage to="/register">Sign Up</LinkToRegisterPage>
           </NoAccountParagraph>
         </NoAccountSection>
+
+        <GetTheApp />
 
         <Footer></Footer>
       </Layout>
