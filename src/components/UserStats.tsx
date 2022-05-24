@@ -17,6 +17,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 `;
 
 const Quantity = styled.p`
@@ -30,7 +31,7 @@ const VariableName = styled.p`
     letter-spacing: 1px;
 `;
 
-const UserMeasurableInfo = (props: any) => {
+const UserStats = (props: any) => {
   return (
     <>
     <Wrapper>
@@ -41,4 +42,4 @@ const UserMeasurableInfo = (props: any) => {
   );
 };
 
-export default UserMeasurableInfo;
+export default UserStats;

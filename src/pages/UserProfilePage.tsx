@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link, Route, Routes } from "react-router-dom";
-import UserMeasurableInfo from "../components/UserMeasurableInfo";
+import UserStats from "../components/UserStats";
+import PostPreview from "../components/PostPreview";
 
 const Layout = styled.main`
   width: 100vw;
@@ -10,7 +11,7 @@ const Layout = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
 `;
 
@@ -44,19 +45,25 @@ const HorizontalLine = styled.div`
   background-color: rgba(168, 168, 168, 0.7);
 `;
 
-const UserInfoSection = styled.div`
+const InfoSection = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding: 10px 12px 0 12px;
 `;
 
-const AvatarAndMeasurableInfoSection = styled.div`
+const AvatarAndStatsSection = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: row;
-  padding: 10px 12px 0 12px;
-  gap: 10%;
+  margin-top: 10px;
+  /* padding: 10px 12px 0 12px; */
+`;
+
+const AvatarWrapper = styled.div`
+  position: relative;
+  width: 70px;
 `;
 
 const Avatar = styled.img`
@@ -65,30 +72,22 @@ const Avatar = styled.img`
   height: 70px;
   margin-right: -35px;
   cursor: pointer;
-
-  /* :after{
-    content: '';
-    background: black;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    display: block;
-  } */
 `;
 
 const AvatarPlusIcon = styled.img`
   border-radius: 100%;
   width: 18px;
   height: 18px;
-  position: relative;
-  right: 15px;
-  bottom: -22px;
+  position: absolute;
+  left: 50px;
+  bottom: 5px;
   cursor: pointer;
 `;
 
 const AccountDescriptionSection = styled.div`
   width: 100%;
-  padding: 10px 12px 0 12px;
+  margin-top: 10px;
+  /* padding: 10px 12px 0 12px; */
 `;
 
 const AccountName = styled.p`
@@ -108,13 +107,75 @@ const AccountLink = styled.a`
   color: #49d1ff;
   font-size: 11px;
   letter-spacing: 0.5px;
-  
-  :visited{
-    color: 49d1ffs;
+
+  :visited {
+    color: #49d1ff;
   }
 `;
 
-const UserPostsSection = styled.div`
+const ButtonsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+  width: 100%;
+`;
+
+const BigButton = styled(Link)`
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 6px 0;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+
+  :visited {
+    color: black;
+  }
+`;
+
+const SmallButton = styled(Link)`
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 6px 0;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  width: 31%;
+  text-align: center;
+  margin: 0 auto;
+
+  :visited {
+    color: black;
+  }
+`;
+
+// For InstagramStories
+// const Circle = styled.div`
+//   border-radius: 100%;
+//   outline: 1px solid black;
+//   outline-offset: 15px;
+//   width: 100px;
+//   height: 100px;
+//   background-image: url("https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+// `;
+
+const PostsSection = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 5px;
+  column-gap: 1%;
+  margin-top: 10px;
+  justify-content: space-between;
 `;
 
 const UserProfilePage = () => {
@@ -127,30 +188,46 @@ const UserProfilePage = () => {
             <HorizontalLine></HorizontalLine>
           </UsernameSection>
 
-        <UserInfoSection>
-          
-          <AvatarAndMeasurableInfoSection>
-            <Avatar src="https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Avatar>
-            <AvatarPlusIcon src={require('../assets/images/avatar-plus.png')}></AvatarPlusIcon>
-            <UserMeasurableInfo variableName='Posts' quantity='244'></UserMeasurableInfo>
-            <UserMeasurableInfo variableName='Followers' quantity='4,453'></UserMeasurableInfo>
-            <UserMeasurableInfo variableName='Following' quantity='806'></UserMeasurableInfo>
-            </AvatarAndMeasurableInfoSection>
+          <InfoSection>
+            <AvatarAndStatsSection>
+              <AvatarWrapper>
+                <Avatar src="https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></Avatar>
+                <AvatarPlusIcon
+                  src={require("../assets/images/avatar-plus.png")}
+                ></AvatarPlusIcon>
+              </AvatarWrapper>
+              <UserStats variableName="Posts" quantity="244"></UserStats>
+              <UserStats variableName="Followers" quantity="4,453"></UserStats>
+              <UserStats variableName="Following" quantity="806"></UserStats>
+            </AvatarAndStatsSection>
 
             <AccountDescriptionSection>
               <AccountName>Account Name</AccountName>
               <AccountBio>
-                Inspired by phytopharmacy, we've brought together science and nature to create effective active organic skincare. Award winning certified skincare.
+                Inspired by phytopharmacy, we've brought together science and
+                nature to create effective active organic skincare. Award
+                winning certified skincare.
               </AccountBio>
-              <AccountLink href='https://google.com'>matinala_skincare.com</AccountLink>
-            </AccountDescriptionSection>   
+              <AccountLink href="https://google.com">
+                matinala_skincare.com
+              </AccountLink>
+            </AccountDescriptionSection>
 
-          </UserInfoSection>
+            <ButtonsWrapper>
+              <BigButton to="/">Edit Profile</BigButton>
+              <SmallButton to="/">Promotion</SmallButton>
+              <SmallButton to="/">Insight</SmallButton>
+              <SmallButton to="/">Contact</SmallButton>
+            </ButtonsWrapper>
+          </InfoSection>
 
-          <UserPostsSection>
-
-          </UserPostsSection>
-
+          <PostsSection>
+            <PostPreview photo='https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'></PostPreview>
+            <PostPreview photo='https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'></PostPreview>
+            <PostPreview photo='https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'></PostPreview>
+            <PostPreview photo='https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'></PostPreview>
+            <PostPreview photo='https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'></PostPreview>
+          </PostsSection>
         </MainSection>
       </Layout>
     </>
