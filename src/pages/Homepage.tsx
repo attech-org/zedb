@@ -7,7 +7,7 @@ const StyledLink = styled(Link)`
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
-`
+`;
 
 const Homepage = () => {
   return (
@@ -16,6 +16,7 @@ const Homepage = () => {
         <nav>
           <StyledLink to="/login">Login</StyledLink>
           <Link to="/register">Register</Link>
+          <Link to="/explore">Search</Link>
         </nav>
       </header>
       <h1>Homepage</h1>
