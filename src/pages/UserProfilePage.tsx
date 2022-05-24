@@ -118,6 +118,7 @@ const ButtonsWrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   flex-direction: row;
+  justify-content: space-between;
   margin-top: 10px;
   width: 100%;
 `;
@@ -151,7 +152,6 @@ const SmallButton = styled(Link)`
   letter-spacing: 0.5px;
   width: 31%;
   text-align: center;
-  margin: 0 auto;
 
   :visited {
     color: black;
