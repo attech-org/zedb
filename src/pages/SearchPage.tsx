@@ -23,31 +23,6 @@ const Layout = styled.div`
   padding-bottom: 10px;
 `;
 
-// const Rectangle = styled.div`
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   background: #d12f2f;
-//   width: 100%;
-//   height: 100%;
-//   /* grid-auto-rows: 115px; */
-//   grid-gap: 2px;
-// `;
-// const RectangleRight = styled(Rectangle)`
-//   grid-template-columns: 1fr 2fr;
-// `;
-// const RectangleLeft = styled(Rectangle)`
-//   grid-template-columns: 2fr 1fr;
-// `;
-
-// const SquareRight = styled(Square)`
-//   grid-column: 2/2;
-//   grid-row: 1/3;
-// `;
-// const SquareLeft = styled(Square)`
-//   grid-column: 1/1;
-//   grid-row: 1/3;
-// `;
-
 const Container = styled.div`
   width: 100%;
   display: grid;
@@ -57,6 +32,39 @@ const Container = styled.div`
 
 const SearchPage = () => {
   const pictures = [
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
     "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
     "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
@@ -129,6 +137,8 @@ const SearchPage = () => {
             <ImgDiv></ImgDiv>3
           </Square>
         </RectangleLeft> */}
+
+        <footer></footer>
       </Layout>
     </Main>
   );
