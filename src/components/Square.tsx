@@ -22,7 +22,6 @@ const SquaresBig = styled(Squares)`
 
 type pictureTypeObject = {
   url: string;
-  big?: boolean | undefined;
 };
 
 interface SquareProps {
