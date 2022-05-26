@@ -31,62 +31,9 @@ const Container = styled.div`
 `;
 
 const SearchPage = () => {
-  const pictures = [
-    {
-      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    },
-    {
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    },
-    {
-      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    },
-    {
-      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    },
-    {
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    },
-    {
-      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    },
-    {
-      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    },
-    {
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    },
-    {
-      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    },
-    {
-      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    },
-    {
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    },
-    {
-      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    },
-    {
-      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    },
-    {
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    },
-    {
-      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    },
-    {
-      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    },
-    {
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    },
-    {
-      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    },
-  ];
+  const pictures = [...new Array(100).fill(false)].map((_el, i) => ({
+    url: `https://via.placeholder.com/${40 + i}0`,
+  }))
 
   return (
     <Main>

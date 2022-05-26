@@ -33,7 +33,7 @@ export const Square: React.FC<SquareProps> = ({ pictures }) => {
   return (
     <>
       {pictures.map((item: pictureTypeObject, i: number) =>
-        i === 1 || (i % 9 === 0 && i % 2) || ((i - 1) % 9 === 0 && i % 2) ? (
+        (!(i % 9) && i % 2) || (!((i - 1) % 9) && i % 2) ? (
           <SquaresBig>{<Img src={item.url} alt="" />}</SquaresBig>
         ) : (
           <Squares>{<Img src={item.url} alt="" />}</Squares>
