@@ -1,3 +1,4 @@
+import { log } from "console";
 import styled from "styled-components";
 
 const Img = styled.img`
@@ -19,32 +20,36 @@ const SquaresBig = styled(Squares)`
   grid-row: span 2;
 `;
 
+type pictureTypeObject = {
+  url: string;
+  big?: boolean | undefined;
+};
+
 interface SquareProps {
-  pictures: Array<string>;
+  pictures: Array<pictureTypeObject>;
 }
 
 export const Square: React.FC<SquareProps> = ({ pictures }) => {
   return (
     <>
-      {pictures.map((url: string, i: number) =>
-        i === 1 ||
-        // i! % 9 ||
-        // (i + 1) % 9 ||
-        i === 9 ||
-        i === 19 ||
-        i === 27 ||
-        i === 37 ||
-        i === 45 ||
-        i === 55 ||
-        i === 63 ||
-        i === 73 ||
-        i === 81 ||
-        i === 91 ? (
-          <SquaresBig>{<Img src={url} alt="" />}</SquaresBig>
+      {pictures.map((item: pictureTypeObject, i: number) =>
+        i === 1 || (i % 9 === 0 && i % 2) || ((i - 1) % 9 === 0 && i % 2) ? (
+          <SquaresBig>{<Img src={item.url} alt="" />}</SquaresBig>
         ) : (
-          <Squares>{<Img src={url} alt="" />}</Squares>
+          <Squares>{<Img src={item.url} alt="" />}</Squares>
         )
       )}
     </>
   );
 };
+// i === 1 ||
+// i === 9 ||
+// i === 19 ||
+// i === 27 ||
+// i === 37 ||
+// i === 45 ||
+// i === 55 ||
+// i === 63 ||
+// i === 73 ||
+// i === 81 ||
+// i === 91

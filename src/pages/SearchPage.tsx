@@ -32,57 +32,60 @@ const Container = styled.div`
 
 const SearchPage = () => {
   const pictures = [
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
-    "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
-    "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    {
+      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    },
+    {
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    },
+    {
+      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    },
+    {
+      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    },
+    {
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    },
+    {
+      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    },
+    {
+      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    },
+    {
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    },
+    {
+      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    },
+    {
+      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    },
+    {
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    },
+    {
+      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    },
+    {
+      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    },
+    {
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    },
+    {
+      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    },
+    {
+      url: "https://funart.pro/uploads/posts/2021-03/1617054432_6-p-oboi-priroda-4k-6.jpg",
+    },
+    {
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNucRKn044wOGq4vv4_xDngt3hH2RvvpPHw&usqp=CAU",
+    },
+    {
+      url: "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+    },
   ];
 
   return (
@@ -92,51 +95,6 @@ const SearchPage = () => {
         <Container>
           <Square pictures={pictures} />
         </Container>
-
-        {/* <RectangleRight>
-          <Square>
-            <ImgDiv></ImgDiv>1
-          </Square>
-          <SquareRight>
-            <ImgDiv></ImgDiv>2
-          </SquareRight>
-          <Square>
-            <ImgDiv></ImgDiv>3
-          </Square>
-        </RectangleRight>
-        <Rectangle>
-          <Square>
-            <ImgDiv></ImgDiv>1
-          </Square>
-          <Square>
-            <ImgDiv></ImgDiv>2
-          </Square>
-          <Square>
-            <ImgDiv></ImgDiv>3
-          </Square>
-        </Rectangle>
-        <Rectangle>
-          <Square>
-            <ImgDiv></ImgDiv>1
-          </Square>
-          <Square>
-            <ImgDiv></ImgDiv>2
-          </Square>
-          <Square>
-            <ImgDiv></ImgDiv>3
-          </Square>
-        </Rectangle>
-        <RectangleLeft>
-          <Square>
-            <ImgDiv></ImgDiv>1
-          </Square>
-          <SquareLeft>
-            <ImgDiv></ImgDiv>2
-          </SquareLeft>
-          <Square>
-            <ImgDiv></ImgDiv>3
-          </Square>
-        </RectangleLeft> */}
 
         <footer></footer>
       </Layout>
