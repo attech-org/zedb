@@ -9,7 +9,7 @@ const StyledLink = styled(Link)`
   font-weight: bold;
 `
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <div>
       <header>
@@ -18,9 +18,9 @@ const Homepage = () => {
           <Link to="/register">Register</Link>
         </nav>
       </header>
-      <h1>Homepage</h1>
+      <h1>HomePage</h1>
     </div>
   );
 };
 
-export { Homepage };
+export { HomePage };
