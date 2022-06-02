@@ -3,17 +3,17 @@ import { LeftPanel } from "../LeftPanel";
 import { RightPanel } from "../RightPanel";
 
 const Wrapper = styled.div`
-  width: 100vw;
-  height: 100%;
+  height: 200vh;
 
   display: grid;
-  grid-template-columns: 0.7fr 1.2fr 1fr;
+  grid-template-columns: 25% 42% 33%;
   grid-template-rows: 100vh;
+
   @media (max-width: 1280px) {
-    grid-template-columns: 0.4fr 1.2fr 1fr;
+    grid-template-columns: 14% 48% 38%;
   }
   @media (max-width: 1000px) {
-    grid-template-columns: 0.3fr 1.3fr;
+    grid-template-columns: 19% 81%;
   }
   @media (max-width: 500px) {
     grid-template-columns: 1fr;
@@ -22,8 +22,6 @@ const Wrapper = styled.div`
 `;
 
 const Main = styled.main`
-  border: 1px solid #eeeeee;
-  padding: 20px;
   text-align: center;
 `;
 

@@ -5,6 +5,7 @@ import { Blogpage } from "./pages/Blogpage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import Layout from "./components/Layout/Layout";
+import { FeedPost } from "./components/FeedPost";
 
 const App = () => {
   // const dispatch = useDispatch();
@@ -23,6 +24,9 @@ const App = () => {
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<SignUpPage />} />
+
+          <Route path="/posts" element={<FeedPost />} />
+
           <Route path="/about" element={<Aboutpage />} />
           <Route path="/blog" element={<Blogpage />} />
         </Routes>
