@@ -16,6 +16,8 @@ export const FeedPost = () => {
     <Div>
       <PostHeader />
       <Homefeed />
+
+      {/* <FeedPost></FeedPost> */}
     </Div>
   );
 };
