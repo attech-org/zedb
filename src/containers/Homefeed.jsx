@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 const Layout = styled.div`
@@ -44,17 +45,16 @@ const IconsDiv = styled.div`
 `;
 
 const CircleDiv = styled.div`
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(29, 155, 240);
   :hover {
-    /* background: #e0dfdf; */
-    background: rgb(29, 155, 240);
+    background: rgb(230, 241, 248);
     transition-duration: 0.2s;
-    opacity: 0.3;
   }
 `;
 
@@ -85,13 +85,17 @@ const WrapperInputDiv = styled.div`
 `;
 
 const Svg = styled.svg`
-  color: rgb(29, 155, 240);
   height: 20px;
   width: 20px;
+  fill: rgb(29, 155, 240);
 `;
 
 const Svg1 = styled(Svg)`
   opacity: 0.5;
+`;
+
+const TweetPost = styled.div`
+  border: 1px solid #eeeeee;
 `;
 
 export const Homefeed = () => {
@@ -100,6 +104,24 @@ export const Homefeed = () => {
       url: "https://bipbap.ru/wp-content/uploads/2017/12/0f92147ad2284aae418b40faf24dc68902960019_hq-640x456.jpg",
     },
   ];
+
+  const [tweets, setTweets] = useState([]);
+
+  const [inputText, setInputText] = useState("");
+
+  const addTweet = () => {
+    if (inputText.trim().length) {
+      setTweets([
+        ...tweets,
+        {
+          id: new Date().toISOString(),
+          inputText,
+        },
+      ]);
+      setInputText("");
+    }
+  };
+
   return (
     <>
       <Layout>
@@ -108,7 +130,11 @@ export const Homefeed = () => {
         ))}
         <InputField>
           <WrapperInputDiv>
-            <Input placeholder="What's happening?"></Input>
+            <Input
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+              placeholder="What's happening?"
+            ></Input>
           </WrapperInputDiv>
 
           <SubmitFormDiv>
@@ -170,10 +196,16 @@ export const Homefeed = () => {
               </CircleDiv>
             </IconsDiv>
 
-            <Button>Tweet</Button>
+            <Button onClick={addTweet}>Tweet</Button>
           </SubmitFormDiv>
         </InputField>
       </Layout>
+
+      <ul>
+        {tweets.map((tweet) => (
+          <TweetPost key={tweet.id}>{tweet.inputText}</TweetPost>
+        ))}
+      </ul>
     </>
   );
 };
