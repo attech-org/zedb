@@ -6,7 +6,23 @@ const Div = styled.div`
   align-items: center;
   padding: 0px 16px;
   height: 53px;
-  width: inherit;
+
+  width: calc(42% - 32px);
+
+  @media (max-width: 1280px) {
+    width: calc(48% - 32px);
+  }
+
+  @media (max-width: 1000px) {
+    width: calc(65.61% - 32px);
+  }
+  @media (max-width: 700px) {
+    width: calc(81% - 32px);
+  }
+
+  @media (max-width: 500px) {
+    width: calc(100% - 32px);
+  }
   cursor: pointer;
   position: fixed;
   background: #ffffff;
@@ -15,15 +31,6 @@ const Div = styled.div`
 
 const Wrapper = styled.div`
   padding-bottom: 53px;
-
-  width: calc(42% - 32px);
-
-  @media (max-width: 1280px) {
-    width: calc(48% - 32px);
-  }
-  @media (max-width: 500px) {
-    width: calc(100% - 32px);
-  }
 `;
 
 const H3 = styled.h3`

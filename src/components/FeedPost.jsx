@@ -4,10 +4,10 @@ import { PostHeader } from "./PostHeader";
 
 const Div = styled.div`
   @media (max-width: 1000px) {
-    width: calc(81% - 22%);
+    width: 81%;
   }
-  @media (max-width: 500px) {
-    width: calc(100%);
+  @media (max-width: 700px) {
+    width: 100%;
   }
 `;
 
