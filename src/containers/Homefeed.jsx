@@ -26,7 +26,6 @@ const Logo = styled.img`
 
 const Button = styled.button`
   background-color: rgb(29, 155, 240);
-  opacity: 0.5;
   min-height: 36px;
   min-width: 36px;
   outline-style: none;
@@ -40,6 +39,9 @@ const Button = styled.button`
   border-radius: 9999px;
 `;
 
+const ButtonOpacity = styled(Button)`
+  opacity: 0.5;
+`;
 const IconsDiv = styled.div`
   display: flex;
 `;
@@ -195,8 +197,11 @@ export const Homefeed = () => {
                 </Svg1>
               </CircleDiv>
             </IconsDiv>
-
-            <Button onClick={addTweet}>Tweet</Button>
+            {inputText ? (
+              <Button onClick={addTweet}>Tweet</Button>
+            ) : (
+              <ButtonOpacity>Tweet</ButtonOpacity>
+            )}
           </SubmitFormDiv>
         </InputField>
       </Layout>
