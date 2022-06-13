@@ -185,7 +185,7 @@ export const FeedPost: React.FC<userInfoProps> = ({ usersPosts }) => {
                     </g>
                   </ReactionSvg>
                 </CircleDiv>
-                <Quantity>6,767</Quantity>
+                <Quantity>{obj.commentsQuantity}</Quantity>
               </Reactions>
               <GreenReaction>
                 <CircleDivGreen>
@@ -195,7 +195,7 @@ export const FeedPost: React.FC<userInfoProps> = ({ usersPosts }) => {
                     </g>
                   </ReactionSvg>
                 </CircleDivGreen>
-                <Quantity>15.6K</Quantity>
+                <Quantity>{obj.retweetQuantity}</Quantity>
               </GreenReaction>
               <RedReaction>
                 <CircleDivRed>
@@ -205,7 +205,7 @@ export const FeedPost: React.FC<userInfoProps> = ({ usersPosts }) => {
                     </g>
                   </ReactionSvg>
                 </CircleDivRed>
-                <Quantity>191.2K</Quantity>
+                <Quantity>{obj.likeQuantity}</Quantity>
               </RedReaction>
               <Reactions>
                 <CircleDiv>

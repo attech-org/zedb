@@ -24,6 +24,9 @@ export type userTypeObject = {
         url: string[];
       }
     | undefined;
+  commentsQuantity?: string;
+  retweetQuantity?: string;
+  likeQuantity?: string;
 };
 export const Home = () => {
   let userInfo: Array<userTypeObject> = [
@@ -45,6 +48,10 @@ export const Home = () => {
           "https://pbs.twimg.com/media/FUiCU3CX0AAw1BX?format=jpg&name=medium",
         ],
       },
+
+      commentsQuantity: "6,767",
+      retweetQuantity: "15.6K",
+      likeQuantity: "191.2K",
     },
   ];
   return (
