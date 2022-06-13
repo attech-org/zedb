@@ -200,7 +200,7 @@ export const Homefeed: React.FC<userInfoProps> = ({ userInfo }) => {
                 </Svg1>
               </CircleDiv>
             </IconsDiv>
-            {inputText ? (
+            {inputText.trim() ? (
               <Button onClick={addTweet}>Tweet</Button>
             ) : (
               <ButtonOpacity>Tweet</ButtonOpacity>
