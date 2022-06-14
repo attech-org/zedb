@@ -68,8 +68,6 @@ export const Home = () => {
       <Homefeed userInfo={userInfo} />
 
       <FeedPost usersPosts={usersPosts}></FeedPost>
-
-      <ProfileForm />
     </Div>
   );
 };
