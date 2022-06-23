@@ -16,6 +16,7 @@ const Homepage = () => {
         <nav>
           <StyledLink to="/login">Login</StyledLink>
           <Link to="/register">Register</Link>
+          <Link to="/posts">Posts</Link>
           <Link to="/explore">Search</Link>
         </nav>
       </header>
