@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { LeftPanel } from "../LeftPanel";
-import { RightPanel } from "../RightPanel";
+import { LeftPanel } from "./LeftPanel";
+import { RightPanel } from "./RightPanel";
 
 const Wrapper = styled.div`
   height: 200vh;

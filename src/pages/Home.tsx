@@ -53,6 +53,23 @@ export const Home = () => {
       retweetQuantity: "15.6K",
       likeQuantity: "191.2K",
     },
+    {
+      url: "https://pbs.twimg.com/profile_images/1529956155937759233/Nyn1HZWF_400x400.jpg",
+      nickname: "John Doe",
+      isVerified: false,
+      userId: "@john_doe",
+      postingTime: "10h",
+      text: `I'm superman`,
+      pictures: {
+        url: [
+          "https://static.remove.bg/remove-bg-web/913b22608288cd03cc357799d0d4594e2d1c6b41/assets/start-1abfb4fe2980eabfbbaaa4365a0692539f7cd2725f324f904565a9a744f8e214.jpg",
+        ],
+      },
+
+      commentsQuantity: "6,767",
+      retweetQuantity: "15.6K",
+      likeQuantity: "191.2K",
+    },
   ];
   return (
     <Div>

@@ -4,7 +4,7 @@ import { Aboutpage } from "./pages/Aboutpage";
 import { Blogpage } from "./pages/Blogpage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-import Layout from "./components/Layout/Layout";
+import Layout from "./components/Layout";
 import { Home } from "./pages/Home";
 import SearchPage from "./pages/SearchPage";
 

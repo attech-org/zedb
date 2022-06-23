@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { userTypeObject } from "../pages/Home";
 
-const Layout = styled.div`
+const PostLayout = styled.div`
   border: 1px solid #eeeeee;
   border-bottom: none;
   padding: 12px 16px;
@@ -150,7 +150,7 @@ export const FeedPost: React.FC<userInfoProps> = ({ usersPosts }) => {
   return (
     <>
       {usersPosts.map((obj) => (
-        <Layout>
+        <PostLayout>
           <Logo src={obj.url} alt=""></Logo>
 
           <Div>
@@ -219,7 +219,7 @@ export const FeedPost: React.FC<userInfoProps> = ({ usersPosts }) => {
               </Reactions>
             </ReactionToPost>
           </Div>
-        </Layout>
+        </PostLayout>
       ))}
     </>
   );
