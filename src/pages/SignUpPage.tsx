@@ -5,7 +5,7 @@ import SignUpPageInputField from "../containers/RegisterForm";
 
 const Layout = styled.main`
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh + 40px);
   background-color: #f8f8f8;
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@ const MainSection = styled.div`
   flex-wrap: wrap;
   border: 1px solid #dbdbdb;
   background-color: #ffffff;
-  margin: 0 0 10px;
+  margin: 40px 0 10px;
 `;
 
 const HaveAnAccountSection = styled.div`

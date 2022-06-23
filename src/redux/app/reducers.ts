@@ -2,13 +2,14 @@ import { createSlice } from '@reduxjs/toolkit'
 import { AppState } from './types'
 
 const initialState: AppState = {
-  theme: 'light'
+  theme: 'light',
 }
 
 export const appSlice = createSlice({
   name: 'app',
   initialState,
   reducers: {
+    
     changeTheme: (state) => {
       state.theme = state.theme === 'light' ? 'dark' : 'light'
     }

@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import Layout from "./components/Layout/Layout";
 import { Home } from "./pages/Home";
+import SearchPage from "./pages/SearchPage";
 
 const App = () => {
   // const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/register" element={<SignUpPage />} />
 
           <Route path="/posts" element={<Home />} />
+          <Route path="/explore" element={<SearchPage />} />
 
           <Route path="/about" element={<Aboutpage />} />
           <Route path="/blog" element={<Blogpage />} />
