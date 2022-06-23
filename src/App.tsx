@@ -4,6 +4,7 @@ import { Aboutpage } from "./pages/Aboutpage";
 import { Blogpage } from "./pages/Blogpage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import SearchPage from "./pages/SearchPage";
 
 const App = () => {
   // const dispatch = useDispatch();
@@ -21,6 +22,8 @@ const App = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<SignUpPage />} />
+        <Route path="/explore" element={<SearchPage />} />
+
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/blog" element={<Blogpage />} />
       </Routes>
