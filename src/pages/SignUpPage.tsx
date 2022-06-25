@@ -4,7 +4,6 @@ import { GetTheApp } from "../components/GetTheApp";
 import SignUpPageInputField from "../containers/RegisterForm";
 
 const Layout = styled.main`
-  width: 100vw;
   height: calc(100vh + 40px);
   background-color: #f8f8f8;
   display: flex;

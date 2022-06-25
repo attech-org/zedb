@@ -5,8 +5,6 @@ import SignUpPage from "./SignUpPage";
 import { GetTheApp } from "../components/GetTheApp";
 
 const Layout = styled.main`
-  width: 100vw;
-  height: 100vh;
   background-color: #f8f8f8;
   display: flex;
   justify-content: center;
@@ -24,21 +22,8 @@ const MainSection = styled.div`
   flex-wrap: wrap;
   border: 1px solid #dbdbdb;
   background-color: #ffffff;
-  margin: 0 0 10px;
+  margin: 40px 0 10px;
 `;
-
-// const OrHeader = styled.h3`
-//   width: 80%;
-//   text-align: center;
-//   border-bottom: 1px solid #000;
-//   line-height: 0.1em;
-//   margin: 10px 0 30px;
-// `;
-
-// const OrSpan = styled.span`
-//   background: #fff;
-//   padding: 0 10px;
-// `;
 
 const OrHeader = styled.h3`
   width: 80%;

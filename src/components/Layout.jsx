@@ -3,8 +3,6 @@ import { LeftPanel } from "./LeftPanel";
 import { RightPanel } from "./RightPanel";
 
 const Wrapper = styled.div`
-  height: 200vh;
-
   display: grid;
   grid-template-rows: 100vh;
 
