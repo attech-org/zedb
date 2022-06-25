@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Homefeed } from "../containers/Homefeed";
 import { PostHeader } from "../components/PostHeader";
 import { FeedPost } from "../components/FeedPost";
+import { ProfileForm } from "../components/ProfileForm";
 
 const Div = styled.div`
   @media (max-width: 1000px) {
@@ -32,6 +33,13 @@ export const Home = () => {
   let userInfo: Array<userTypeObject> = [
     {
       url: "https://bipbap.ru/wp-content/uploads/2017/12/0f92147ad2284aae418b40faf24dc68902960019_hq-640x456.jpg",
+      nickname: "Elon Musk",
+      isVerified: true,
+      userId: "@elonmusk",
+      postingTime: "3h",
+      commentsQuantity: "0",
+      retweetQuantity: "0",
+      likeQuantity: "0",
     },
   ];
 
