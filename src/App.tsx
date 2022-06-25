@@ -11,6 +11,9 @@ import { UserPostPage } from "./pages/UserPostPage";
 import { UserLikesPage } from "./pages/UserLikesPage";
 import { UserMediaPage } from "./pages/UserMediaPage";
 import { UserPage } from "./pages/UserPage";
+import Layout from "./components/Layout";
+import { Home } from "./pages/Home";
+import SearchPage from "./pages/SearchPage";
 
 const App = () => {
   // const dispatch = useDispatch();
@@ -24,25 +27,18 @@ const App = () => {
 
   return (
     <>
-      <Link to='/home'>Home</Link>  
-      <br /> 
-      <Link to='/notifications'>Notifications</Link>
-      <br />
-      <Link to='/messages'>Messages</Link>
-      <br />
-      <Link to='/vasyagladush'>VasyaGladush</Link>      
-      <br />
-      <Link to='/vasyagladush/with_replies'>VasyaGladushWithReplies</Link>      
-      <br />
-      <Link to='/vasyagladush/media'>VasyaGladushMedia</Link>      
-      <br />
-      <Link to='/vasyagladush/likes'>VasyaGladushLikes</Link>      
-      <br />
-      <Link to='/vasyagladush/post/uuid'>VasyaGladushPost</Link>      
-      <br />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<SignUpPage />} />
 
-      <Routes>
-        <Route path="/home" element={<HomePage />} />
+          <Route path="/posts" element={<Home />} />
+          <Route path="/explore" element={<SearchPage />} />
+
+          <Route path="/about" element={<Aboutpage />} />
+          <Route path="/blog" element={<Blogpage />} />
+
         <Route path="/notifications" element={<NotificationsPage />} />
         <Route path="/messages" element={<MessagesPage />} />
         <Route path="/:username" element={<UserPage />} />
@@ -50,7 +46,8 @@ const App = () => {
         <Route path="/:username/media" element={<UserMediaPage />} />
         <Route path="/:username/likes" element={<UserLikesPage />} />
         <Route path="/:username/post/:postId" element={<UserPostPage />} />
-      </Routes>
+        </Routes>
+      </Layout>
     </>
   );
 };
