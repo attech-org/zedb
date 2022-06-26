@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { TweetEditor } from "../components/TweetEditor/TweetEditor";
+import TweetForm from "../containers/TweetForm";
 
 const StyledLink = styled(Link)`
   color: red;
@@ -21,6 +23,12 @@ const Homepage = () => {
         </nav>
       </header>
       <h1>Homepage</h1>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <TweetForm />
     </div>
   );
 };
