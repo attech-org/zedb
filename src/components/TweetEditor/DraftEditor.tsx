@@ -3,7 +3,7 @@ import { composeDecorators } from "./utils/composeDecorators";
 import { useField } from "usetheform";
 import { Editor, EditorState } from "draft-js";
 import styled from "styled-components";
-import "./public-DraftEditorPlaceholder-root.css"
+import "./DraftEditor.css"
 
 const StyledEditor = styled.div`
   display: block;
