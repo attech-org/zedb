@@ -2,15 +2,15 @@
   "name": "zedb",
   "contributors": [
     {
-      "name" : "Vladislav Pokhyl",
+      "name": "Vladislav Pokhyl",
       "url": "https://github.com/VladislavPokhyl"
     },
     {
-      "name" : "David Korystov",
+      "name": "David Korystov",
       "url": "https://github.com/DavidKorystov"
     },
     {
-      "name" : "Vasyl Hladush",
+      "name": "Vasyl Hladush",
       "url": "https://github.com/vasyagladush"
     }
   ],
@@ -27,6 +27,7 @@
     "@types/react-dom": "^18.0.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-hook-form": "^7.33.0",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",

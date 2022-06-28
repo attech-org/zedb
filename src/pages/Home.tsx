@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Homefeed } from "../containers/Homefeed";
 import { PostHeader } from "../components/PostHeader";
 import { FeedPost } from "../components/FeedPost";
-import { ProfileForm } from "../components/ProfileForm";
 
 const Div = styled.div`
   @media (max-width: 1000px) {

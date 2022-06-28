@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";
 import Input from "../components/Input";
 
@@ -21,57 +21,55 @@ const Button = styled.button`
   border: 1px solid transparent;
 `;
 
-const SignUpPageInputField = (props: any) => {
-  const [signUpInput, setsignUpInput] = useState("");
-  const [passwordInput, setPasswordInput] = useState("");
-  const [fullNameInput, setFullNameInput] = useState("");
-  const [UserNameInput, setUserNameInput] = useState("");
+interface InputField {
+  name: string;
+  userName: string;
+  email: string;
+  password: string;
+}
 
-  const onLoginInputChange = (e: any) => {
-    setsignUpInput(e.target.value);
-  };
+const SignUpPageInputField = () => {
+  const { register, handleSubmit, reset } = useForm<InputField>();
 
-  const onFullNameInputChange = (e: any) => {
-    setFullNameInput(e.target.value);
+  const onSubmit: SubmitHandler<InputField> = ({
+    name,
+    userName,
+    email,
+    password,
+  }) => {
+    // console.log({ name, userName, email, password });
+    fetch("http://localhost:3001/users/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        userName,
+        email,
+        password,
+      }),
+    });
+    reset();
   };
-  const onUserNameInputChange = (e: any) => {
-    setUserNameInput(e.target.value);
-  };
-
-  const onPasswordInputChange = (e: any) => {
-    setPasswordInput(e.target.value);
-  };
-
-  const onButtonClick = () => {
-    if (signUpInput !== "" && passwordInput !== "")
-      props.onButtonClick(signUpInput, passwordInput);
-  };
-
   return (
-    <>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <Input
-        onChange={onLoginInputChange}
-        value={signUpInput}
+        {...register("email")}
+        type="email"
         placeholder="Mobile number or email address"
       ></Input>
+      <Input {...register("name")} type="text" placeholder="Full Name" />
+      <Input {...register("userName")} type="text" placeholder="Username" />
       <Input
-        onChange={onFullNameInputChange}
-        value={fullNameInput}
-        placeholder="Full Name"
-      />
-      <Input
-        onChange={onUserNameInputChange}
-        value={UserNameInput}
-        placeholder="Username"
-      />
-      <Input
-        onChange={onPasswordInputChange}
-        value={passwordInput}
+        {...register("password", {
+          minLength: 6,
+        })}
         type="password"
         placeholder="Password"
-      ></Input>
-      <Button onClick={onButtonClick}>Sign Up</Button>
-    </>
+      />
+      <Button type="submit">Sign Up</Button>
+    </form>
   );
 };
 
