@@ -1,4 +1,3 @@
-import { log } from "console";
 import styled from "styled-components";
 
 const Img = styled.img`

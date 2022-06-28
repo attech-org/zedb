@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import styled from "styled-components";
 import Input from "../components/Input";
 
 const Button = styled.button`
   margin-top: 10px;
   margin-bottom: 20px;
-  width: 80%;
+  width: 100%;
   height: 2em;
   color: white;
   border-radius: 4px;
@@ -20,39 +20,55 @@ const Button = styled.button`
   background-color: #00b3ff;
   border: 1px solid transparent;
 `;
+const LoginInput = styled(Input)`
+  width: calc(100% - 20px);
+`;
 
-const LoginPageInputField = (props: any) => {
-  const [loginInput, setLoginInput] = useState("");
-  const [passwordInput, setPasswordInput] = useState("");
+const Form = styled.form`
+  width: 80%;
+`;
 
-  const onLoginInputChange = (e: any) => {
-    setLoginInput(e.target.value);
-  };
+interface InputField {
+  userName: string;
+  password: string;
+}
 
-  const onPasswordInputChange = (e: any) => {
-    setPasswordInput(e.target.value);
-  };
+const LoginPageInputField = () => {
+  const { register, handleSubmit, reset } = useForm<InputField>();
 
-  const onButtonClick = () => {
-    if (loginInput !== "" && passwordInput !== "")
-      props.onButtonClick(loginInput, passwordInput);
+  const onSubmit: SubmitHandler<InputField> = ({ userName, password }) => {
+    // console.log({ userName, password });
+    fetch("http://localhost:3001/users/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userName,
+        password,
+      }),
+    });
+    reset();
   };
 
   return (
-    <>
-      <Input
-        onChange={onLoginInputChange}
-        value={loginInput}
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      <LoginInput
+        {...register("userName")}
+        type="text"
         placeholder="Phone number, username, or email"
-      ></Input>
-      <Input
-        onChange={onPasswordInputChange}
-        value={passwordInput}
+      />
+
+      <LoginInput
+        {...register("password", {
+          minLength: 6,
+        })}
         type="password"
         placeholder="Password"
-      ></Input>
-      <Button onClick={onButtonClick}>Log In</Button>
-    </>
+      />
+
+      <Button type="submit">Log In</Button>
+    </Form>
   );
 };
 
